@@ -57,7 +57,10 @@ export default function CarrouselHome() {
                         </Grid>
                         <Grid item xs={12} md={6} lg={3}>
                             <div style={{
-                                backgroundImage: `url("https://swiperjs.com/demos/images/nature-4.jpg")`, width: "100%", height: "100%", backgroundSize: "cover",
+                                backgroundImage: `url("https://swiperjs.com/demos/images/nature-4.jpg")`, 
+                                width: "100%", 
+                                height: "100%", 
+                                backgroundSize: "cover",
                                 backgroundRepeat: "no-repeat"
                             }}></div>
                         </Grid>
@@ -65,14 +68,53 @@ export default function CarrouselHome() {
 
                 </SwiperSlide>
 
-                <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                <SwiperSlide >
+                    <Grid container height={"100%"}>
+                        <Grid item
+                            xs={12} md={6} lg={3}
+                            style={{
+                                backgroundImage: `url("https://images4.alphacoders.com/132/1329876.png")`,
+                                width: "100%", height: "100%",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition:"center"
+                            }}>
+
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={3}
+                            style={{
+                                backgroundImage: `url("https://i.blogs.es/0396e6/superman-cavill/1366_2000.webp")`,
+                                width: "100%", height: "100%",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition:"center"
+                            }}>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={3}>
+                            <div style={{
+                                backgroundImage: `url("https://i.blogs.es/c12af0/2224860-2011_green_lantern_movie_1680x1050/1366_2000.jpeg")`,
+                                width: "100%", height: "100%",
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition:"center"
+                            }}></div>
+                        </Grid>
+                        <Grid item xs={12} md={6} lg={3}>
+                            <div style={{
+                                backgroundImage: `url("https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2017/04/iron-man-25-curiosidades-vengador-dorado-marvel_25.jpg?tf=1920x")`,
+                                width: "100%", 
+                                height: "100%", 
+                                backgroundSize: "cover",
+                                backgroundRepeat: "no-repeat",
+                                backgroundPosition:"center"
+                            }}></div>
+                        </Grid>
+                    </Grid>
+
                 </SwiperSlide>
-                <SwiperSlide>
-                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </SwiperSlide>
+
             </Swiper>
-            <div style={{ backgroundImage: `url("https://swiperjs.com/demos/images/nature-1.jpg")`, width: "100%", height: "100%" }}></div>
+            
         </>
     );
 }
