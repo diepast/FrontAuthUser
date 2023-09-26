@@ -1,0 +1,23 @@
+.mySwiper{
+    height: 300px;
+}
+.carrousel_grid_item{
+    height: 100%;
+}
+
+@media screen and (max-width:1200px){
+    .mySwiper{
+        height: 600px;
+    }
+    .carrousel_grid_item{
+        height: 50%;
+    }
+}
+@media screen and (max-width:900px){
+    .mySwiper{
+        height: 1200px;
+    }
+    .carrousel_grid_item{
+        height: 25%;
+    }
+}
