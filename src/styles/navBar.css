@@ -1,0 +1,90 @@
+.nav_container{
+    width: 100vw;
+    height: 50px;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.nav_accion_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.navLink_web{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+}
+.navLink_mobile{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    width: 100%;
+}
+.navLink_web :hover{
+    cursor: pointer;
+    color: lightgrey;
+
+}
+.navLink_mobile :hover{
+    cursor: pointer;
+    color: lightgrey;
+
+}
+.nav_button_responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.nav_button_responsive > button{
+    width: 20%;
+    height: 80%;
+    
+}
+
+.nav_menu_responsive{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 200px;
+    height: calc(100vh - 50px);
+    background-color: grey;  
+    display: flex;
+    flex-direction: column;
+}
+
+.show{
+    display:flex
+}
+
+.notshow{
+    display: none;
+}
+
+@media screen and (max-width: 500px){
+    .nav_accion_container{
+        display: none;
+    }
+    .nav_button_responsive {
+      display: flex;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .show{
+        display: none;
+    }
+}
+
