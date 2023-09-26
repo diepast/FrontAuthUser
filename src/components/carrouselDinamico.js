@@ -116,7 +116,7 @@ const data = [
 
                             {slide.heros.map( hero =>
                                 
-                                {return (<Grid key={hero.id} item xs={12} md={6} lg={3}
+                                {return (<Grid key={hero.id} item xs={12} sm= {6} md={6} lg={3}
                                     className='carrousel_grid_item'>
                                     <div style={{
                                         backgroundImage: "url(" + hero.image + ")",

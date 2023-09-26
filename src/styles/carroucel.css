@@ -28,7 +28,7 @@
     height: 30%;
 }
 
-@media screen and (max-width:1200px){
+@media (min-width:601px) and (max-width:1200px){
     .mySwiper{
         height: 600px;
     }
@@ -36,7 +36,7 @@
         height: 50%;
     }
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:600px){
     .mySwiper{
         height: 1200px;
     }
