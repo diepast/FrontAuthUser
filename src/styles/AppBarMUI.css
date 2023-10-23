@@ -1,9 +1,148 @@
-.liks_router{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
+.appBar {
+  z-index: 3;
+  width: 100%;
+  height: 80px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+
+}
+
+.icon-logo {
+  width: 118px;
+}
+
+.user-button {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.liks_router {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.nav_icon {
+  border-radius: 50px;
+  width: 50px !important;
+
+}
+
+.nav_icon:hover {
+  box-shadow: 0 0 17px 3px #0ff, 0 0 4px 2px #0ff;
+}
+
+button {
+  margin: 20px;
+}
+
+.custom-btn {
+  color: #fff;
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/* 1 */
+
+/* 7 */
+.btn-7 {
+  color: #21ebff;
+  line-height: 40px;
+  padding: 0;
+  border: none;
+}
+
+.btn-7 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #21ebff;
+  box-shadow: 0 0 5px #21ebff;
+  transition: all 0.3s ease;
+}
+
+.btn-7:before {
+  height: 50%;
+  width: 2px;
+}
+
+.btn-7:after {
+  width: 20%;
+  height: 2px;
+}
+
+.btn-7:hover:before {
+  height: 100%;
+}
+
+.btn-7:hover:after {
+  width: 100%;
+}
+
+.btn-7 span:before,
+.btn-7 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #21ebff;
+  box-shadow: 0 0 5px #21ebff;
+  transition: all 0.3s ease;
+}
+
+.btn-7 span:before {
+  width: 2px;
+  height: 50%;
+}
+
+.btn-7 span:after {
+  height: 2px;
+  width: 20%;
+}
+
+.btn-7 span:hover:before {
+  height: 100%;
+}
+
+.btn-7 span:hover:after {
+  width: 100%;
+}
+
+.css-3dzjca-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+  background-color: black !important;
+  box-shadow: 0 0 10px 4px #0ff, 0 0 4px 2px #0ff !important;
+}
+
+.css-hzdx6y-MuiModal-root-MuiPopover-root-MuiMenu-root {
+  background-color: transparent !important;
+}
+
+.menu_responsive_button {
+  margin: 0 !important;
 }

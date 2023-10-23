@@ -1,0 +1,205 @@
+.signin_order {
+  margin-bottom: 25px !important;
+}
+
+.links_forms {
+  color: #3da7f8
+}
+
+.form_container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.complement_container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.image_container {
+  display: flex;
+  width: 100%;
+  height: 60%;
+  background-image: url("../images/signIn.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.form_submit_button {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 90px;
+}
+
+.form_main_container {
+  margin: 0 !important;
+  padding-bottom: 16px;
+  max-width: auto !important;
+  width: 50% !important;
+  background-color: lightgray !important;
+  height: 100vh !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: flex-end !important;
+  background:
+    linear-gradient(to bottom, black 20%, lightgray 30% 70%, black 80% 100%);
+  box-shadow: 0px 1px 9px 8px rgba(0, 0, 0, 1) inset;
+}
+
+.letter_container {
+  --text-color: #f00;
+  --border-color: #3da7f8;
+  --animation-time: 1s;
+  --text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 5px var(--text-color),
+    0 0 10px var(--text-color), 0 0 10px var(--text-color),
+    0 0 10px var(--text-color), 0 0 10px var(--text-color),
+    0 0 20px var(--text-color), 0 0 30px var(--text-color),
+    0 0 40px var(--text-color), 0 0 55px var(--text-color),
+    0 0 75px var(--text-color);
+  --box-shadow: inset 0 0 50px var(--border-color), 0 0 10px var(--border-color),
+    0 0 20px var(--border-color), 0 0 30px var(--border-color);
+}
+
+
+.letter_container {
+  width: auto;
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.33);
+  border-radius: 20px;
+  padding: 14px 24px;
+  transform: rotate(-6deg);
+  animation: turnOnBorder 0.24s forwards step-end,
+    flickerBorder calc(var(--animation-time) * 16) infinite step-end 1s;
+
+}
+
+.letter_container p {
+  font-family: Roboto;
+  margin: 0px;
+  color: #fff;
+}
+
+.letter_container span {
+  font-size: 70px;
+}
+
+.letter_container p span {
+  opacity: 0.33;
+  animation: turnOn forwards step-end;
+}
+
+.letter_container p span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.letter_container p span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.letter_container p span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.letter_container p span:nth-child(4) {
+  animation: turnOn 0.27s forwards step-end,
+    flicker var(--animation-time) infinite step-end 1s;
+}
+
+@keyframes turnOnBorder {
+  100% {
+    border: 3px solid #fff;
+    box-shadow: var(--box-shadow);
+    opacity: 1;
+  }
+}
+
+@keyframes turnOn {
+  100% {
+    text-shadow: var(--text-shadow);
+    opacity: 1;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    text-shadow: var(--text-shadow);
+  }
+
+  99% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flickerBorder {
+  0% {
+    box-shadow: var(--box-shadow);
+  }
+
+  99% {
+    box-shadow: none;
+  }
+}
+
+.css-nzinn5-MuiContainer-root {
+  max-width: 2000px !important;
+}
+
+.MuiBox-root {
+  width: 100% !important;
+}
+
+@media (min-width:601px) and (max-width:900px) {
+  .image_container {
+    display: none;
+  }
+
+  .complement_container {
+    align-items: center;
+    width: 30%;
+  }
+
+  .letter_container {
+    transform: rotate(-90deg)
+  }
+
+  .form_main_container {
+    width: 70% !important;
+  }
+
+}
+
+@media screen and (max-width:600px) {
+  .letter_container {
+    transform: rotate(0deg);
+
+  }
+
+  .form_main_container {
+    width: 100% !important;
+  }
+
+  .image_container {
+    display: none;
+  }
+
+  .complement_container {
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+  }
+}

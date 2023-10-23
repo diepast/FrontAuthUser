@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "ComicTest";
+  src: url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Comic+Neue:ital,wght@0,700;1,700&family=Grape+Nuts&family=Homemade+Apple&family=Kalam:wght@300&display=swap');
+}
+
+.main-div {
+  position: relative;
+  margin: 10px;
+  background-color: transparent;
+}
+
+.main-div1::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 10px #ffff01, 0 0 4px 5px #ffff01;
+  box-shadow: 0 0 17px 10px #ffff01, 0 0 4px 5px #ffff01;
+  -webkit-animation-name: yellow-shadow;
+  animation-name: yellow-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.main-div1::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  -webkit-box-shadow: 0 0 17px 10px #0ff, 0 0 4px 5px #0ff;
+  box-shadow: 0 0 17px 10px #0ff, 0 0 4px 5px #0ff;
+  -webkit-animation-name: cyan-shadow;
+  animation-name: cyan-shadow;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+h1 {
+
+  font-family: 'ComicTest', cursive;
+  margin: 0;
+  position: relative;
+  z-index: 3;
+  padding: 20px;
+  background-color: #060C1F;
+  color: #fff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  text-align: center;
+
+}
+
+h1:hover {
+  background-color: white;
+  color: #060C1F;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+@-webkit-keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 50%;
+    left: 0;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  75% {
+    top: 0;
+    left: 50%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@keyframes yellow-shadow {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 50%;
+    left: 0;
+  }
+
+  50% {
+    top: 50%;
+    left: 50%;
+  }
+
+  75% {
+    top: 0;
+    left: 50%;
+  }
+
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@keyframes cyan-shadow {
+  0% {
+    right: 0;
+    bottom: 0;
+  }
+
+  25% {
+    right: 0;
+    bottom: 50%;
+  }
+
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+
+  75% {
+    right: 50%;
+    bottom: 0;
+  }
+
+  100% {
+    right: 0;
+    bottom: 0;
+  }
+}

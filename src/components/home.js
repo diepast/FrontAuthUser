@@ -1,21 +1,23 @@
 import React from "react";
 import "../styles/home.css"
-import CarrouselHome from "./carrousel";
+import { Grid } from "@mui/material";
 import CarrouselHomeDinamico from "./carrouselDinamico";
-
+import ButtonCallToAction from "./buttonCallToAcction";
 
 function Home() {
-let tecnologia = "REACT"
 
     return (
-        <>
-        <div className="home_main_container">
-            <h1>Hola MUNDO!!!!!</h1>
-            <h2>Welcome to {tecnologia}</h2>
-            <p>Este es un bootcamp sobre el FRAMEWORK de {tecnologia}</p>
-        </div>
-        <CarrouselHomeDinamico/>
-        </>
+        <div className="home_container">
+            <div className="home_main_container">
+                <div className="home_main_subcontainer"></div>
+                <Grid container justifyContent="center">
+                    <Grid item height={"40%"} xs={11} sm={9} md={9} lg={6}>
+                        <ButtonCallToAction />
+                    </Grid>
+                </Grid>
+            </div>
+            <CarrouselHomeDinamico />
+        </div >
     )
 
 }

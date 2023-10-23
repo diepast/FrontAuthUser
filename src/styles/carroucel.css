@@ -1,11 +1,14 @@
-.mySwiper{
+.mySwiper {
     height: 300px;
+    width: 100%;
 }
-.carrousel_grid_item{
+
+.carrousel_grid_item {
     height: 100%;
     position: relative;
 }
-.carrousel_hero_name_container{
+
+.carrousel_hero_name_container {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -14,11 +17,12 @@
     height: 30%;
     opacity: 0.8;
 }
-.carrousel_hero_name_title{
+
+.carrousel_hero_name_title {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-color:transparent;
+    background-color: transparent;
     color: white;
     display: flex;
     flex-direction: row;
@@ -28,19 +32,22 @@
     height: 30%;
 }
 
-@media (min-width:601px) and (max-width:1200px){
-    .mySwiper{
+@media (min-width:601px) and (max-width:1200px) {
+    .mySwiper {
         height: 600px;
     }
-    .carrousel_grid_item{
+
+    .carrousel_grid_item {
         height: 50%;
     }
 }
-@media screen and (max-width:600px){
-    .mySwiper{
+
+@media screen and (max-width:600px) {
+    .mySwiper {
         height: 1200px;
     }
-    .carrousel_grid_item{
+
+    .carrousel_grid_item {
         height: 25%;
     }
 }
