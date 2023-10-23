@@ -18,6 +18,8 @@ export default function SignUp() {
         console.log({
             email: data.get('email'),
             password: data.get('password'),
+            firstName: data.get('firstname'),
+            lastName: data.get('lastName')
         });
     };
 
@@ -36,7 +38,7 @@ export default function SignUp() {
                 </div>
                 <div className='image_container'></div>
             </div>
-            <Container component="main" maxWidth="xs" className='form_main_container'>
+            <Container component="main" maxWidth="xs" >
                 <CssBaseline />
                 <Box
                     sx={{
@@ -47,66 +49,71 @@ export default function SignUp() {
                     }}
                 >
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <TextField
-                                    name="firstName"
-                                    required
-                                    fullWidth
-                                    id="firstName"
-                                    label="First Name"
-                                    autoFocus
-                                />
+                        <div className='form_main_container'>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6}>
+                                    <TextField
+                                        name="firstName"
+                                        required
+                                        fullWidth
+                                        id="firstName"
+                                        label="First Name"
+                                        autoFocus
+                                        color='secondary'
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <TextField
+                                        required
+                                        fullWidth
+                                        id="lastName"
+                                        label="Last Name"
+                                        name="lastName"
+                                        color='secondary'
+                                    />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    id="lastName"
-                                    label="Last Name"
-                                    name="lastName"
-                                />
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoFocus
+                                color='secondary'
+                            />
+                            <Grid container spacing={2}>
+                                <Grid item xs={12} sm={6}>
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        name="password"
+                                        label="Password"
+                                        type="password"
+                                        id="password"
+                                        color='secondary'
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <TextField
+                                        margin="normal"
+                                        required
+                                        fullWidth
+                                        name="confirm-password"
+                                        label="Confirm Password"
+                                        type="password"
+                                        id="confirm-password"
+                                        color='secondary'
+                                    />
+                                </Grid>
                             </Grid>
-                        </Grid>
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            autoFocus
-                        />
-                        <Grid container spacing={2}>
-                            <Grid item xs={12} sm={6}>
-                                <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    name="password"
-                                    label="Password"
-                                    type="password"
-                                    id="password"
-
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <TextField
-                                    margin="normal"
-                                    required
-                                    fullWidth
-                                    name="confirm-password"
-                                    label="Confirm Password"
-                                    type="password"
-                                    id="confirm-password"
-                                />
-                            </Grid>
-                        </Grid>
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
-
+                            <FormControlLabel
+                                control={<Checkbox value="remember" color='secondary' />}
+                                label="Remember me"
+                            />
+                        </div>
                         <button
                             type="submit"
                             className="custom-btn btn-7 form_submit_button">

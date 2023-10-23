@@ -36,7 +36,7 @@ export default function SignIn() {
                 </div>
                 <div className='image_container'></div>
             </div>
-            <Container component="main" maxWidth="xs" className='form_main_container'>
+            <Container component="main" maxWidth="xs" >
                 <CssBaseline />
                 <Box
                     sx={{
@@ -48,34 +48,34 @@ export default function SignIn() {
                 >
 
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="email"
-                            label="Email Address"
-                            name="email"
-                            autoComplete="email"
-                            autoFocus
-                            className='signin_order'
-                        />
-                        <TextField
-                            margin="normal"
-                            required
-                            fullWidth
-                            name="password"
-                            label="Password"
-                            type="password"
-                            id="password"
-                            autoComplete="current-password"
-                            className='signin_order'
-                        />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                            className='signin_order'
-                        />
+                        <div className='form_main_container'>
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                id="email"
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                autoFocus
+                                color='secondary'
+                            />
+                            <TextField
+                                margin="normal"
+                                required
+                                fullWidth
+                                name="password"
+                                label="Password"
+                                type="password"
+                                id="password"
+                                autoComplete="current-password"
+                                color='secondary'
+                            />
+                            <FormControlLabel
+                                control={<Checkbox value="remember" color="secondary" />}
+                                label="Remember me"
+                            />
+                        </div>
 
                         <button
                             type="submit"
@@ -95,6 +95,7 @@ export default function SignIn() {
 
                             </Grid>
                         </Grid>
+
                     </Box>
                 </Box>
 

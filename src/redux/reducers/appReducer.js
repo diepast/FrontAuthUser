@@ -11,7 +11,6 @@ const appReducer = (state = initialState, action) => {
 
     switch (action.type) {
         case 'showNav':
-            console.log(action)
             return {
                 ...state,
                 showNav: action.payload,

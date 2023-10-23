@@ -64,7 +64,7 @@ function AppBarNav() {
                     </LinkRouter>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                        <div width="50px">
+                        <div style={{width:"50px"}}>
                             <Box sx={{
                                 mr: 1,
                                 width: 50,
@@ -99,16 +99,16 @@ function AppBarNav() {
                         >
                             <MenuItem onClick={handleCloseNavMenu}>
                                 <button
-                                    onClick={handleCloseNavMenu} class="custom-btn btn-7 menu_responsive_button">
+                                    onClick={handleCloseNavMenu} className="custom-btn btn-7 menu_responsive_button">
                                     <span>
                                         <LinkRouter to='/' className="liks_router">HOME</LinkRouter>
                                     </span>
                                 </button>
                             </MenuItem>
                             {pages.map((page, index) => (
-                                <MenuItem key={index} onClick={handleCloseNavMenu}>
+                                <MenuItem key={page+index} onClick={handleCloseNavMenu}>
                                     <button
-                                        onClick={handleCloseNavMenu} class="custom-btn btn-7 menu_responsive_button">
+                                        onClick={handleCloseNavMenu} className="custom-btn btn-7 menu_responsive_button">
                                         <span>{page}</span>
                                     </button>
                                 </MenuItem>
@@ -118,8 +118,8 @@ function AppBarNav() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page, index) => (
-                            <button key={index}
-                                onClick={handleCloseNavMenu} class="custom-btn btn-7">
+                            <button key={page+index}
+                                onClick={handleCloseNavMenu} className="custom-btn btn-7">
                                 <span>{page}</span>
                             </button>
                         ))}
@@ -146,11 +146,11 @@ function AppBarNav() {
                             open={Boolean(anchorElUser)}
                             onClose={handleCloseUserMenu}
                         >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu} style={{ backgroundColor: "black" }}>
+                            {settings.map((setting,index) => (
+                                <MenuItem key={setting+index} onClick={handleCloseUserMenu} style={{ backgroundColor: "black" }}>
 
                                     <button
-                                        onClick={handleCloseNavMenu} class="custom-btn btn-7 menu_responsive_button">
+                                        onClick={handleCloseNavMenu} className="custom-btn btn-7 menu_responsive_button">
                                         <span>{setting}</span>
                                     </button>
                                 </MenuItem>
