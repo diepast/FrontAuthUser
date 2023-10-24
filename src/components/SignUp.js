@@ -10,17 +10,24 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { Link as LinkRouter } from 'react-router-dom'
+import userActions from '../redux/actions/userActions';
+import { useDispatch } from 'react-redux';
 
 export default function SignUp() {
+    const dispatch = useDispatch()
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
+        const userData = {
             email: data.get('email'),
             password: data.get('password'),
-            firstName: data.get('firstname'),
-            lastName: data.get('lastName')
-        });
+            firstName: data.get('firstName'),
+            lastName: data.get('lastName'),
+            from:"signUp-form"
+        };
+        dispatch(userActions.signUpUser(userData))
+
     };
 
     return (

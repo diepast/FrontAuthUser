@@ -3,11 +3,18 @@ import { urlBackend } from '../../App';
 
 const userActions = {
 
-    signUpUser: (userData) => {
-       
-        return async (dispatch, getState) => {
+    signUpUser: (user) => {
 
-            const res = await axios.post(`${urlBackend}/api/auth/signUp`, { userData })
+        const userData = {
+            fullName: user.firstName + " " + user.lastName,
+            email: user.email,
+            password: user.password,
+            from: user.from,
+            aplication: "heroes"
+        }
+        return async (dispatch, getState) => {
+            const res = await axios.post(`${urlBackend}/api/users/auth/signup`, { userData })
+
             dispatch({
                 type: 'message',
                 payload: {
@@ -15,9 +22,9 @@ const userActions = {
                     message: res.data.message,
                     success: res.data.success
                 }
-            });           
-
+            });
         }
+
     },
     signInUser: (logedUser) => {
 
@@ -44,8 +51,8 @@ const userActions = {
             dispatch({ type: 'user', payload: null });
             return user
         }
-        
+
     },
-    
+
 }
 export default userActions;
